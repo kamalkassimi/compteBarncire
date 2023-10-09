@@ -4,4 +4,3 @@ public class Versemaent extends Operation{
     }
     
 }
-
