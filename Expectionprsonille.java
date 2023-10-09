@@ -1,5 +1,3 @@
-package compteBancire;
-
 import java.io.IOException;
 
 public class Expectionprsonille extends Exception {

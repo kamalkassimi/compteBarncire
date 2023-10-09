@@ -1,5 +1,3 @@
-package compteBancire;
-
 import java.util.Date;
 
 public class Operation {
@@ -7,16 +5,11 @@ public class Operation {
     private int numero;
     private Date date;
     private double montant;
-    private OperationType type;
-
-    public Operation(double montant ,OperationType type ) {
+    public Operation(double montant) {
         this.numero = num++;
         this.date = new Date();
         this.montant = montant;
-        this.type = type;
-    }
-
-    public Operation(double montant) {
+        
     }
 
     public double getMontant() {
@@ -29,9 +22,6 @@ public class Operation {
 
     public static void setNum(int num) {
         Operation.num = num;
-    }
-    public OperationType getType(){
-        return  this.type;
     }
     public int getNumero() {
         return numero;
@@ -55,6 +45,6 @@ public class Operation {
 
     @Override
     public String toString() {
-        return  "numero=" + numero + ", date=" + date + ", montant=" + montant + "type :"+this.type;
+        return  "numero=" + numero + ", date=" + date + ", montant=" + montant ;
     }
 }

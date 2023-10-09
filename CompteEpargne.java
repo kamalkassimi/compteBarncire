@@ -1,5 +1,3 @@
-package compteBancire;
-
 import java.util.List;
 
 public class CompteEpargne extends compte{
@@ -12,23 +10,18 @@ public class CompteEpargne extends compte{
 
     @Override
     public void retrait(double montant) {
-        if (montant > 0) {
-            solde += montant;
-        } else {
-            System.out.println("Le montant du versement doit être positif.");
-        }
     }
     @Override
-    public void transfererVers(compte compteDestinataire, double montant) {
-        if (this.consulterSolde() >= montant) {
+    public void transfererVers(compte compteDestinataire, double montant)   {
+        if (this.consulterSolde() >= montant)  {
             this.retrait(montant);
             compteDestinataire.virement(montant);
-            for(int i=0; i < 2; i++)
-                this.solde -= montant;
+            for(int i=0; i < 1; i++)
+                 solde -= montant;
         }
     }
     @Override
     public String toString() {
-        return super.toString()+"tauxInterets=" + this.tauxInterets + ", solde=" + this.solde ;
+        return super.toString()+"tauxInterets=" + this.tauxInterets  ;
     }
 }
